@@ -60,16 +60,16 @@ Usage: switch to Agent mode, then type:
 
 **When to run each command:**
 
-| Command | When |
-| --- | --- |
-| `/init` | Once, at project start |
-| `/update` | Any time source docs change |
-| `/deps` | Any time you're questioning staleness |
-| `/assets` | Once, when logomark is ready |
-| `/tool` | Twice: at start (register) + at launch (flip to live) |
-| `/log` | Any time you want to write a build post |
-| `/seo` | Pre-launch, once |
-| `/launch` | Pre-launch, after `/seo` |
+| Command   | When                                                  |
+| --------- | ----------------------------------------------------- |
+| `/init`   | Once, at project start                                |
+| `/update` | Any time source docs change                           |
+| `/deps`   | Any time you're questioning staleness                 |
+| `/assets` | Once, when logomark is ready                          |
+| `/tool`   | Twice: at start (register) + at launch (flip to live) |
+| `/log`    | Any time you want to write a build post               |
+| `/seo`    | Pre-launch, once                                      |
+| `/launch` | Pre-launch, after `/seo`                              |
 
 Usage: type any slash command in chat.
 
@@ -134,11 +134,11 @@ Drop your logomark, type `/assets`, done.
 
 - `public/brand/logomark.png` — 1024×1024, your mark on a transparent background
 
-**Stop here if your mark is colored** (e.g. amber, blue, any hue that reads on both light and dark backgrounds). Single mode is correct — `logomark.png` gets used for both favicon modes. You do not need `logomark-dark.png`.
+That's it. The script auto-detects whether your mark is colored or grayscale and generates the correct light/dark favicon pair automatically.
 
-**Optional — only if your mark is white or very light:**
+**Optional overrides:**
 
-- `public/brand/logomark-dark.png` — your mark as it should appear on dark backgrounds. Only needed when `logomark.png` is a white/light mark intended for light mode only. If present, enables separate light/dark favicon files.
+- `public/brand/logomark-dark.png` — if present, overrides the auto-detected dark-mode favicon (use when you want a hand-crafted dark version instead of the auto-inverted one)
 - `public/brand/banner.png` — 1280×320 README header. Auto-generated from your logomark if missing.
 
 Then type `/assets` in chat — it checks prerequisites, runs the generator, and commits the output automatically.
