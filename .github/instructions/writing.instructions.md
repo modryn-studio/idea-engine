@@ -108,6 +108,7 @@ State where things stand, or name the next decision point, or both.
 title: "Short, direct — no question marks, no hype"
 date: "YYYY-MM-DD"
 tag: "launch | milestone | killed | learning | build"
+description: "150–160 character summary. One or two sentences. What happened and why it matters. No hype words."
 ---
 ```
 
@@ -116,6 +117,12 @@ Title rules:
 - Lowercase after the colon is fine
 - No year in the title (it's in the date)
 - Max 10 words
+
+Description rules:
+- **Required.** Without it, the first line of content becomes the meta description — often too short or out of context.
+- Target 150–160 characters (Bing/Google truncate at ~160)
+- Plain language. What the post is about, not what the reader will "learn"
+- Avoid starting with "In this post..." or "I explore..."
 
 ---
 
