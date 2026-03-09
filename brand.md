@@ -26,10 +26,51 @@ One or two sentences describing who you're building for. Be specific about what 
 ## Visual Rules
 
 - Color mode: <!-- TODO: Example: "Dark mode base, system toggle" -->
-- Accent color: <!-- TODO: Example: "Amber / Burnt Orange (#F97415)" -->
 - Fonts: <!-- TODO: Example: "Space Grotesk (headlines) + Space Mono (badges/code)" -->
 - Motion: <!-- TODO: Example: "Minimal. One scroll fade max." -->
 - Avoid: <!-- TODO: Example: "No fake testimonials, no stock photos, no popups" -->
+
+---
+
+## Color System
+
+Five named slots — fill all before running `/init`. These become the `@theme` tokens in `globals.css`.
+
+| Name | Hex | Role |
+|---|---|---|
+| Accent | <!-- TODO: #XXXXXX --> | Primary — CTAs, logomark, key interactive moments |
+| Secondary | <!-- TODO: #XXXXXX --> | Supporting accent — celebration states, highlights |
+| Background | <!-- TODO: #XXXXXX --> | Page background base |
+| Text | <!-- TODO: #XXXXXX --> | Body text — dark, but warm not cold |
+| Muted | <!-- TODO: #XXXXXX --> | Secondary text, borders, placeholders |
+
+Color rules:
+- <!-- TODO: What color territory does your main competitor own? Avoid it entirely. Example: "Competitor X owns blue-purple gradients." -->
+- <!-- TODO: Any colors explicitly banned? Example: "No cool grays, no pure black, no gradients." -->
+
+---
+
+## Logomark
+
+Discovery questions — answer all before attempting to design the mark.
+
+**Direction:**
+<!-- TODO: Letterform, abstract shape, or icon? Example: "Single letterform — the S in Instrument Serif" -->
+
+**Primary color:**
+<!-- TODO: Which brand color is the mark rendered in? Example: "Accent #FF6B6B" -->
+
+**Background:**
+<!-- TODO: Transparent, contained circle, etc.? Example: "Transparent — no container" -->
+
+**Future-proofing:**
+<!-- TODO: Is the mark tied to the current niche, or scalable? Example: "No birthday-specific imagery — mark must work if product expands to anniversaries/graduations" -->
+
+**Competitor exclusions:**
+<!-- TODO: What visual territory does your main competitor own that you must avoid? Example: "Competitor owns pink-purple gradient circle + music note — avoid: gradients, circle badges, music notes" -->
+
+**Anti-patterns:**
+<!-- TODO: Broader category clichés to avoid. Example: "No music notes, no headphones, no waveform bars, no vinyl" -->
 
 ---
 
