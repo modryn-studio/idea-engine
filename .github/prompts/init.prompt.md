@@ -18,6 +18,7 @@ Then edit `.github/copilot-instructions.md` and replace every `<!-- TODO -->` se
 - **Project Structure** — keep `/app`, `/components`, `/lib`. Add any project-specific directories from context.md. Remove the `<!-- TODO -->` comment.
 - **Route Map** — list every route from context.md with a one-line description. Always include `/privacy` and `/terms`.
 - **Brand & Voice** — populate from brand.md: voice rules, visual rules (colors, fonts, motion), target user description, emotional arc, and copy examples to use as reference.
+- **Tailwind v4 @theme example** — find the `<!-- TODO: update the @theme example below... -->` comment in copilot-instructions.md. Replace the placeholder color values in the `@theme { }` block immediately below it with the actual brand colors from `globals.css`. Update both the hex values and the inline comments (color name + role). Also update the `/* ❌ wrong */` `:root` example to use the real accent color.
 
 Also fill in `src/config/site.ts` — replace every `TODO:` placeholder with real content from context.md and brand.md:
 
