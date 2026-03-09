@@ -35,6 +35,15 @@ basePath: <!-- /tools/your-slug   (empty for standalone modes) -->
 - `/privacy`         → Privacy policy
 - `/terms`           → Terms of service
 
+## Brand & Voice
+<!-- TODO: populate from brand.md
+  Voice rules: how the product sounds (tone, banned words, sentence style)
+  Target User: 2–3 sentence portrait of who is using this and why
+  Visual Rules: colors (all 5 with roles), fonts, motion, things to avoid
+  Emotional Arc: what the user feels at each stage — land, use, convert, share
+  Copy Reference: real examples of hero, CTA, error, waiting state copy
+-->
+
 ## README Standard
 
 Every project README follows this exact structure — no more, no less:
@@ -73,16 +82,19 @@ When adding a badge row (optional, for open source tools/libraries only):
 This project uses Tailwind CSS v4. The rules are different from v3 — follow these exactly.
 
 **Design tokens live in `@theme`, not `:root`:**
+
+<!-- TODO: update the @theme example below with the actual brand colors from globals.css -->
 ```css
 /* ✅ correct — generates text-accent, bg-surface, border-border, etc. */
 @theme {
-  --color-accent: #F97415;
-  --color-surface: #111111;
-  --color-border: #222222;
-  --color-muted: #666666;
-  --color-text: #e5e5e5;
-  --color-bg: #050505;
-  --font-heading: var(--font-sans);
+  --color-accent: #F97415;    /* TODO: replace with brand accent color */
+  --color-secondary: #FFDD00; /* TODO: replace with brand secondary color */
+  --color-bg: #050505;        /* TODO: replace with brand background color */
+  --color-text: #e5e5e5;      /* TODO: replace with brand text color */
+  --color-muted: #666666;     /* TODO: replace with brand muted color */
+  --color-surface: #111111;   /* TODO: replace with brand surface color */
+  --color-border: #222222;    /* TODO: replace with brand border color */
+  --font-heading: var(--font-sans); /* TODO: replace with brand heading font */
 }
 
 /* ❌ wrong — :root creates CSS variables but NO utility classes */
