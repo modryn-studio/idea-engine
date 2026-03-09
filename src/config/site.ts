@@ -16,6 +16,13 @@ export const site = {
   ogDescription: 'TODO: OG description (110–160 chars)',
   cta: 'TODO: CTA pill text (5-8 words, e.g. Get started free)', // used in OG images
   founder: 'Luke Hanner',
+  // Waitlist section copy — shown in the EmailSignup component on the landing page.
+  // /init fills these in from context.md + brand.md. Never leave as TODO in production.
+  waitlist: {
+    headline: 'TODO: waitlist headline (4–7 words)',
+    subheadline: 'TODO: 1–2 sentences. Why they should sign up. Reference the product promise.',
+    success: 'TODO: confirmation message — warm, specific to this product.',
+  },
   // Brand colors — used in manifest theme_color / background_color
   accent: '#F97415', // TODO: brand accent hex
   bg: '#050505', // TODO: brand background hex

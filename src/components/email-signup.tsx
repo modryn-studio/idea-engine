@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import { analytics } from '@/lib/analytics';
+import { site } from '@/config/site';
 
 export default function EmailSignup() {
   const [email, setEmail] = useState('');
@@ -38,14 +39,14 @@ export default function EmailSignup() {
   };
 
   return (
-    <section id="signup" className="border-t border-(--color-border)">
+    <section id="signup" className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
-            Don&apos;t miss the drop.
+            {site.waitlist.headline}
           </h2>
-          <p className="mt-4 font-mono text-sm text-(--color-muted) md:text-base">
-            Get notified when this goes live. No newsletters. Just launches.
+          <p className="mt-4 font-mono text-sm text-muted md:text-base">
+            {site.waitlist.subheadline}
           </p>
 
           {!done ? (
@@ -61,19 +62,19 @@ export default function EmailSignup() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={submitting}
-                className="h-12 flex-1 rounded-none border-2 border-(--color-border) bg-transparent px-4 font-mono text-sm placeholder:text-(--color-muted) focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-(--color-accent)"
+                className="h-12 flex-1 rounded-none border-2 border-border bg-transparent px-4 font-mono text-sm placeholder:text-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
               />
               <button
                 type="submit"
                 disabled={submitting}
-                className="h-12 rounded-none bg-(--color-accent) px-8 font-mono text-sm font-bold text-white hover:opacity-90 disabled:opacity-50"
+                className="h-12 rounded-none bg-accent px-8 font-mono text-sm font-bold text-white hover:opacity-90 disabled:opacity-50"
               >
                 {submitting ? 'Sending...' : 'Notify me'}
               </button>
             </form>
           ) : (
-            <div className="mt-8 border border-(--color-accent)/30 bg-(--color-accent)/5 p-4 font-mono text-sm text-(--color-accent)">
-              You&apos;re on the list. Next launch, your inbox.
+            <div className="mt-8 border border-accent/30 bg-accent/5 p-4 font-mono text-sm text-accent">
+              {site.waitlist.success}
             </div>
           )}
 

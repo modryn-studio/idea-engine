@@ -29,6 +29,10 @@ Also fill in `src/config/site.ts` — replace every `TODO:` placeholder with rea
 - `ogDescription` — 110–160 char OG description, slightly more marketing-forward than the meta description
 - `cta` -- short CTA button label (5--8 words) for the OG image pill; pull from brand's primary action or pricing copy (e.g. `'Get your plan for $9 →'`, `'Start for free →'`)
 - `founder` — from context.md or default to "Luke Hanner"
+- **`waitlist`** — personalize all three fields from context.md + brand.md. Never leave these as TODO in production:
+  - `headline` — short, punchy H2 (4–7 words). Describe what's coming, not a generic "don't miss it". Match the brand voice from `brand.md`.
+  - `subheadline` — 1–2 sentences. Why they should sign up. Reference the product's specific promise.
+  - `success` — confirmation message. Warm, specific to this product. NOT "Next launch, your inbox." — that's boilerplate language.
 - `accent` / `bg` — brand colors from brand.md (hex values)
 - `social.twitter` / `social.twitterHandle` — X/Twitter profile URL and handle (e.g. `@lukehanner`) from the Social Profiles section of context.md
 - `social.github` — GitHub URL from the Social Profiles section of context.md
@@ -61,6 +65,10 @@ Check the `Monetization` section of `context.md`.
   - Add `import EmailSignup from '@/components/email-signup'` with the other imports
   - Add `<EmailSignup />` as a section on the page — typically after the hero/main content area, before the footer
 - The component posts to `/api/feedback` with `type: 'newsletter'` — this route already exists in the boilerplate.
+- **Personalize the copy** — update the `waitlist` block in `src/config/site.ts` with project-specific copy:
+  - `headline` — short, punchy H2 (4–7 words). Describe what's coming, not a generic "don't miss it". Match the brand voice from `brand.md`.
+  - `subheadline` — 1–2 sentences. Why they should sign up. Reference the product's specific promise.
+  - `success` — confirmation message. Warm, specific to this product. NOT "Next launch, your inbox." — that's boilerplate language.
 
 **If monetization is `none`**: skip email signup entirely.
 
