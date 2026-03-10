@@ -17,9 +17,8 @@ basePath: <!-- /tools/your-slug   (empty for standalone modes) -->
 - Next.js 16 (App Router) with TypeScript
 - Tailwind CSS for styling
 - Vercel for deployment
-- GA4 + PostHog for custom event tracking (via `@/lib/analytics.ts` — never call `gtag()` or `posthog.capture()` directly)
-- PostHog provider (`PostHogProvider`) wraps `layout.tsx` — pageviews proxied via `/ingest`
-- Vercel Analytics `<Analytics />` component in `layout.tsx` for pageviews only — do not use their `track()` API
+- Vercel Analytics `<Analytics />` in `layout.tsx` — zero-config pageview tracking, no env vars needed
+- `@/lib/analytics.ts` — no-op stub with named methods; wire in a real provider here if needed
 <!-- TODO: add project-specific services (e.g. Resend, Stripe, Prisma, Supabase) -->
 
 ## Project Structure
@@ -150,18 +149,16 @@ export async function POST(req: Request): Promise<Response> {
 
 ## Analytics
 
-All custom events MUST go through `analytics` from `@/lib/analytics.ts` — never call `gtag()` or `posthog.capture()` directly.
+Vercel Analytics (`<Analytics />` in `layout.tsx`) handles pageviews automatically — no config needed.
+
+`@/lib/analytics.ts` is a no-op stub with named methods. Add a named method for each distinct user action — keeps events typed and discoverable. Wire in a real provider (PostHog, Mixpanel, etc.) inside `analytics.ts` if custom event tracking is needed later.
 
 ```typescript
 import { analytics } from '@/lib/analytics';
 analytics.track('event_name', { prop: value });
 ```
 
-Add a named method to `analytics.ts` for each distinct user action. Named methods are typed and
-discoverable — no magic strings scattered across 10 files.
-
-GA4 measurement ID is loaded via `NEXT_PUBLIC_GA_MEASUREMENT_ID` in `layout.tsx`.
-PostHog key is loaded via `NEXT_PUBLIC_POSTHOG_KEY` — same key used across all Modryn Studio projects.
+Do not add GA4 or PostHog without explicit instruction — keep it simple.
 
 ## Dev Server
 
