@@ -1,5 +1,3 @@
-![Modryn Studio Boilerplate](public/brand/banner.png)
-
 # Modryn Studio — Boilerplate
 
 Next.js starter for every Modryn Studio product. Pre-wired for production from day one.
