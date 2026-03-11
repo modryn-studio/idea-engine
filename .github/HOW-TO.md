@@ -80,6 +80,14 @@ At this point you have: a live site, tracking, SEO filed, a public tool listing,
 
 Now build the one killer feature. Wire the complete flow end-to-end — from user input to delivered output. Not ten features. One.
 
+### Minimum Money Loop
+
+Wire the complete loop end-to-end before polishing any single piece. One real order through the whole system beats a perfect intake with no delivery.
+
+Open `context.md` → find `## Minimum Money Loop` → keep it visible. Every build session, ask: *does this work advance the loop, or is it polish?*
+
+**Hard rule: do not touch the landing page until the loop has run once with a real order.**
+
 **The dev loop:**
 
 - `Ctrl+Shift+B` — starts the dev server, pipes output to `dev.log`. Tell Copilot **"check logs"** at any point.
