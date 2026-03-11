@@ -4,7 +4,7 @@ description: "Validates context.md and brand.md against live market data, compet
 agent: agent
 ---
 
-Read `context.md` and `brand.md` from the workspace root. Then run TWO validation passes using web search for every claim.
+Read `context.md`, `brand.md`, and `strategy.md` from the workspace root. Then run TWO validation passes using web search for every claim.
 
 ---
 
