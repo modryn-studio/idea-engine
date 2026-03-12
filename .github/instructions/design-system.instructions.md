@@ -19,7 +19,16 @@ import { Textarea } from '@/components/ui/textarea';
 
 All buttons default to `type="button"`. Pass `type="submit"` explicitly for form submissions.
 
-Shape overrides via `className`: `rounded-none` (blocky), `rounded-lg` (softer), `rounded-2xl` (card-scale).
+**Shape is always the caller's job — never set `rounded-*` inside a primitive.**
+The primitives own structure and token contracts. Shape is a brand decision that belongs in the component using the primitive, not inside it. The rule: if every caller is overriding the same base class, the base class is wrong.
+
+```tsx
+// ✅ correct — shape set at the call site, primitive stays neutral
+<Button className="rounded-none px-6">Submit</Button>
+<Input className="rounded-lg" />
+
+// ❌ wrong — never add rounded-* to button.tsx / input.tsx / textarea.tsx base classes
+```
 
 Exception: intentionally non-standard shapes (circular icon buttons, custom media controls) — these stay as raw `<button>` elements and should be noted in a comment.
 
