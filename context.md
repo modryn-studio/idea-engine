@@ -33,6 +33,20 @@ modrynstudio.com has a verified **Domain property** in Google Search Console. Al
 url:  <!-- https://modrynstudio.com/tools/your-slug -->
 basePath: <!-- /tools/your-slug   (leave empty for standalone modes) -->
 
+## Minimum Money Loop
+<!-- The minimum sequence that results in money changing hands.
+     Wire every step end-to-end before polishing any individual step.
+     One real order through the whole system is the only milestone that matters in Phase 4.
+
+     Fill in your funnel as a one-line arrow chain:
+     [Entry point] → [Core action] → [Payment] → [Fulfillment trigger] → [Delivery] → [Shareable output]
+
+     Example:
+     Landing page → /create intake → Stripe checkout ($9.99) → Admin notified → Admin fulfills → Resend email → /result/[id] shareable page
+
+     Rule: do not polish any one piece until this loop has run once with a real order.
+-->
+
 ## Stack Additions
 <!-- Any services beyond the boilerplate defaults (Next.js, Tailwind, Vercel, GA4)?
      e.g. Resend for email, Stripe for payments, Prisma + Supabase for database -->
@@ -46,20 +60,6 @@ basePath: <!-- /tools/your-slug   (leave empty for standalone modes) -->
      /privacy and /terms will be added automatically.
      Example: - `/dashboard` → Main user dashboard after login -->
 - `/` →
-
-## Minimum Money Loop
-<!-- The minimum sequence that results in money changing hands.
-     Wire every step end-to-end before polishing any individual step.
-     One real order through the whole system is the only milestone that matters in Phase 4.
-
-     Fill in your funnel as a one-line arrow chain:
-     [Entry point] → [Core action] → [Payment] → [Fulfillment trigger] → [Delivery] → [Shareable output]
-
-     Example:
-     Landing page (leave it) → /create intake → Stripe checkout ($9.99) → Admin notified → Admin fulfills → Resend email → /result/[id] shareable page
-
-     Rule: do not polish any one piece until this loop has run once with a real order.
--->
 
 ## Monetization
 <!-- How does this product make money? Pick one:
