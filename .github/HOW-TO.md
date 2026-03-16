@@ -20,7 +20,7 @@ One-time setup. Run these in order when starting a new project.
    ```
 4. Run `npm install`
 5. **Discovery** — two paths:
-   - **Starting from scratch** → Open chat (`Ctrl+Alt+I`), select **Agent** mode, pick **@prebuilt**. Describe the idea. It researches, validates, and fills `context.md` + `brand.md` when you say "fill it in."
+   - **Starting from scratch** → Open chat (`Ctrl+Alt+I`), select **Agent** mode, pick **@prebuild**. Describe the idea. It researches, validates, and fills `context.md` + `brand.md` when you say "fill it in."
    - **Docs already written** → Drop your pre-filled `context.md` and `brand.md` into the project root, replacing the stubs.
 6. Run `/validate` — web-searches competitors, user pain, SEO opportunity, and brand positioning. Go back and forth. Update `context.md` and `brand.md` based on findings.
 7. Type `/setup` — reads source docs, fills in `copilot-instructions.md` + `src/config/site.ts`. Start the dev server (`Ctrl+Shift+B`) and check the basic landing page in your browser.
@@ -170,7 +170,7 @@ You have a working core feature. Now loop: ship → validate → distribute → 
 | `/launch`   | Once      | Distribution checklist: sharing hooks, OG, social prep                                                                                                               |
 | `/polish`   | Reusable  | UI consistency sweep: primitives, migrations, responsive, keyboard safety, touch targets                                                                              |
 | `@check`    | Reusable  | Quality gate: bugs, secrets, lint, build → auto-fixes, commits. Never pushes                                                                                          |
-| `@prebuilt` | Once      | Pre-build discovery: researches market, fills `context.md` + `brand.md`                                                                                               |
+| `@prebuild` | Once      | Pre-build discovery: researches market, fills `context.md` + `brand.md`                                                                                               |
 
 > **modryn-studio-v2 only:** `/deploy` and `/social` exist only in that repo. Switch workspaces to run them.
 
@@ -253,7 +253,7 @@ Or run directly (requires [ImageMagick](https://imagemagick.org)):
 │   └── writing.instructions.md         ← Auto-applied to .mdx files
 ├── agents/
 │   ├── check.agent.md               ← @check agent (quality gate — reusable)
-│   └── prebuilt.agent.md            ← @prebuilt agent (pre-build discovery)
+│   └── prebuild.agent.md            ← @prebuild agent (pre-build discovery)
 ├── prompts/
 │   ├── setup.prompt.md              ← /setup (once)
 │   ├── update.prompt.md             ← /update (reusable)
