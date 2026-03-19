@@ -50,6 +50,18 @@ Using the slug extracted from the URL field in context.md, update `next.config.t
 
 ---
 
+## Update Brand Colors in globals.css
+
+Open `src/app/globals.css`. Update the `@theme { }` block with the actual brand colors from brand.md:
+
+- Replace each hex value with the real brand color
+- Update the inline comment to reflect the color's name and role for this project
+- Update `--font-heading` if the project uses a different heading font than Space Grotesk (rare — skip unless explicitly specified in brand.md)
+
+This is the runtime theme — it must match what you just put in copilot-instructions.md and site.ts.
+
+---
+
 ## Wire EmailSignup Component
 
 Check the `Monetization` section of `context.md`.
