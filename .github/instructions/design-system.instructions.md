@@ -4,6 +4,29 @@ applyTo: '**/*.tsx'
 
 # Design System
 
+## Low Cognitive Load — Enforce in Every Component
+
+Every element that requires mental processing is a tax on the user. Keep it zero.
+
+**Reference standard:** Screen = one action, nothing else visible. Before building any screen or component, ask: what is the ONE action here, and what can be hidden until needed?
+
+**Before writing JSX, stop and answer:**
+
+1. What is the single action on this screen? (4 words max — if you can't, the screen has too much)
+2. What elements can be gated behind state instead of shown upfront?
+3. Is there any copy I'm about to write that the UI itself should communicate?
+
+**Hard rules for TSX:**
+
+- One primary action per screen. If a component introduces a second, push back.
+- No `<p>` or `<span>` copy that explains how the UI works — the UI explains itself.
+- No tooltips. Redesign the element if you think you need one.
+- Labels identify, they don't instruct. `"Market"` not `"Choose the market you want to target."`
+- Don't render an element until it's needed. Gate on state, not on the user reading instructions.
+- Empty states: one minimal hint toward the next action. Not a paragraph.
+- Error messages: one sentence. What to do, not the technical failure description.
+- Secondary paths are links, not content. If something is optional, it's a small link — not a section on the page.
+
 ## Shared UI Primitives
 
 All interactive elements use primitives from `src/components/ui/`. Never write raw `<button>`, `<input>`, or `<textarea>` — import and use the shared components.
@@ -77,10 +100,8 @@ useEffect(() => {
 
 // Apply to the fixed wrapper — style= is needed because Tailwind can't handle dynamic values:
 <div className="fixed inset-x-0 bottom-0" style={{ bottom: keyboardOffset }}>
-  <div className="pb-[calc(1rem+env(safe-area-inset-bottom))]">
-    {/* inputs here */}
-  </div>
-</div>
+  <div className="pb-[calc(1rem+env(safe-area-inset-bottom))]">{/* inputs here */}</div>
+</div>;
 ```
 
 ## Touch Targets
@@ -93,5 +114,5 @@ Use `cn()` from `@/lib/cn` when combining base classes with conditional or overr
 
 ```tsx
 import { cn } from '@/lib/cn';
-<div className={cn('base-classes', condition && 'conditional-class', className)} />
+<div className={cn('base-classes', condition && 'conditional-class', className)} />;
 ```

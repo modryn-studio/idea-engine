@@ -95,6 +95,21 @@ Open `context.md` → find `## Minimum Money Loop` → keep it visible. Every bu
 
 **Before a major implementation:**
 
+**Scan GitHub for reference implementations.** Before building any non-trivial feature — backend service, data pipeline, integration, complex UI pattern — spend 20 minutes reading 2-3 open-source repos that have solved a similar problem. You're not looking for code to copy. You're looking for patterns to borrow and mistakes to skip.
+
+How to search: use `mcp_github_search_repositories` with short 2-3 word queries (multi-word phrases return zero results). Read the root directory listing, then `README.md` + the main entry file. That's usually enough to understand the architecture.
+
+What to extract:
+
+- **API / interface shape** — how do callers start a job, poll for progress, handle errors?
+- **Data/state schema** — what does the data flowing through the system look like?
+- **Core algorithm or pattern** — what's the non-obvious decision at the center of this thing?
+- **What they skipped** — scope they punted on that you might need (or should also skip)
+
+Drop your findings in a `docs/` note before writing a line of code. One file, bullet points. It becomes the implicit spec you build against.
+
+To use it during a build session: drag the file into chat or type `#file:docs/your-reference.md` in your first message. It's research scaffolding — not a source doc, not maintained after the feature ships.
+
 Run `/validate` with a focus area. The mechanics matter — this only works correctly in **Agent mode**:
 
 1. Type `/validate` in the chat input — VS Code will show a dropdown suggesting the prompt. Select it so the prompt file actually loads.
@@ -167,7 +182,7 @@ You have a working core feature. Now loop: ship → validate → distribute → 
 | `/log`      | Reusable  | Drafts a build log post — run at every milestone                                                                                                                      |
 | `/deps`     | Reusable  | Validates dependencies against live docs                                                                                                                              |
 | `/seo`      | Once      | SEO audit + Search Console + Bing setup                                                                                                                               |
-| `/launch`   | Once      | Distribution checklist: sharing hooks, OG, social prep                                                                                                               |
+| `/launch`   | Once      | Distribution checklist: sharing hooks, OG, social prep                                                                                                                |
 | `/polish`   | Reusable  | UI consistency sweep: primitives, migrations, responsive, keyboard safety, touch targets                                                                              |
 | `@check`    | Reusable  | Quality gate: bugs, secrets, lint, build → auto-fixes, commits. Never pushes                                                                                          |
 | `@prebuild` | Once      | Pre-build discovery: researches market, fills `context.md` + `brand.md`                                                                                               |
