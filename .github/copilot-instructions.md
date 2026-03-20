@@ -183,3 +183,13 @@ Tell Copilot **"check logs"** at any point — it reads `dev.log` and flags erro
 - Ship one killer feature, not ten mediocre ones
 - Instrument analytics before features — data from day one
 - Onboard users to value in under 2 minutes
+- **Local-first by default** — no accounts, no data stored server-side, pay only when you use it. This is a brand-level commitment across every product, not a feature toggle.
+
+## Positioning Decision: AI
+
+Do NOT lead with "AI" in copy or headlines. The backlash is real and targets AI hype, not useful tools. Lead with outcomes and the user's problem. AI is an implementation detail, not a selling point.
+
+- ✅ "Tools for people who don't have time for bad software"
+- ✅ "I did the research so you don't have to"
+- ❌ "AI-powered", "AI-first", "built with AI"
+  Products use AI internally. The marketing never needs to say so.
