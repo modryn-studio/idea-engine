@@ -1,4 +1,3 @@
-```prompt
 ---
 name: update
 description: Re-reads context.md, brand.md, and development-principles.md and cascades any changes into copilot-instructions.md, site.ts, and next.config.ts
@@ -60,7 +59,18 @@ If the URL field in `context.md` is blank, leave `next.config.ts` as-is and warn
 
 ---
 
-## Step 5: Report
+## Step 5: Cascade into `README.md`
+
+Update only if the values differ. Do not reformat the file — preserve the `<picture>` block (if present), H1, live link, and divider exactly.
+
+- **Tagline** (line after the `# Product Name` heading): pull from `brand.md` Copy Examples — use the hero H1 value, optionally appended with a short phrase that matches the brand voice.
+- **Stack line** (after `---`): derive from `package.json`. Format: `Name · Name · Name`. Major packages only. Never list a package not in `package.json`. Never include tools or services not actively used (e.g. GA4, Mixpanel) unless they appear in `package.json`.
+
+If both are already accurate, leave the file alone.
+
+---
+
+## Step 6: Report
 
 After cascading, report:
 - Which files were changed and which sections were updated
