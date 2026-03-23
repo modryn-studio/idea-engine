@@ -1,9 +1,11 @@
-# Modryn Studio — Boilerplate
+![idea-engine](public/brand/banner.png)
 
-Next.js starter for every Modryn Studio product. Pre-wired for production from day one.
+# idea-engine
 
-→ [modrynstudio.com](https://modrynstudio.com)
+Type an idea or frustration. Get a buildability score, a reason to build or kill it, and three concrete tasks for this week.
+
+→ [modrynstudio.com/tools/idea-engine](https://modrynstudio.com/tools/idea-engine)
 
 ---
 
-Next.js · TypeScript · Tailwind CSS · Vercel
+Next.js · TypeScript · Tailwind CSS · Anthropic · Vercel
