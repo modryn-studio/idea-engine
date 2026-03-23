@@ -36,7 +36,7 @@ One-time setup. Run these in order when starting a new project.
 
 Get a URL as fast as possible. A live site — even a landing page — is worth more than a perfect local prototype. It unlocks tracking, distribution, and public accountability.
 
-**Build your public footprint first — switch to modryn-studio-v2:**
+**Build your public footprint first:**
 
 1. Run `/tool` — registers the tool on modrynstudio.com with `status: "building"`. Merge the PR right away.
 2. Run `/log` — first build log post. Document the idea, the origin, the plan. Merge the PR.
