@@ -10,6 +10,7 @@
     "check-deps": "npx npm-check-updates"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
     "@vercel/analytics": "^1.5.0",
     "babel-plugin-react-compiler": "^1.0.0",
     "clsx": "^2.1.1",
@@ -29,11 +30,11 @@
     "@types/nodemailer": "^7.0.11",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.0.0",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.1.7",
     "postcss": "^8.5.3",
     "prettier": "3.8.1",
     "prettier-plugin-tailwindcss": "0.7.2",
-    "typescript": "^5.9.3",
-    "eslint": "9.39.4",
-    "eslint-config-next": "16.1.7"
+    "typescript": "^5.9.3"
   }
 }

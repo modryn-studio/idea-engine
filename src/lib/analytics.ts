@@ -13,4 +13,5 @@ export const analytics = {
   track,
   newsletterSignup: (props?: { source?: string }) => track('newsletter_signup', props),
   feedbackSubmit: () => track('feedback_submit'),
+  paymentGate: (action: string) => track('payment_gate', { action }),
 };

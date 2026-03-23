@@ -1,95 +1,90 @@
 # Brand
 
-Fill this in before running `/init`. It populates the Brand & Voice section of `copilot-instructions.md`.
-
 ---
 
 ## Voice
 
 How the product sounds in UI copy, headings, CTAs, and error messages.
 
-- <!-- TODO: voice rule 1. Example: "Short sentences. Direct. No jargon." -->
-- <!-- TODO: voice rule 2. Example: "Confident without being arrogant." -->
-- <!-- TODO: voice rule 3. Example: "Honest about what doesn't exist yet." -->
-- Never use: <!-- TODO: list words/phrases that feel off-brand. Example: "powerful, seamless, revolutionary, unlock" -->
+- Delivers judgment, not enthusiasm. "Here's the score and why" beats "Discover your next big idea!" The tool already knows what to do — write like that's obvious.
+- Precise over clever. The user is a builder — give them numbers, names, mechanisms, and a specific to-do. Skip the inspiration.
+- Confident but not bossy. It tells you what to do next and why — it doesn't lecture you about validation theory.
+- Never use: "powerful," "seamless," "supercharge," "game-changer," "revolutionary," "unlock your potential," "streamline your workflow," "next-level," "effortless," "insights"
 
 ---
 
 ## The User
 
-One or two sentences describing who you're building for. Be specific about what they feel, want, or hate.
-
-<!-- TODO: Example: "Impatient people who hate bad software and don't want to do the research. They want it handed to them. Fast." -->
+A solo developer with three ideas open in tabs and no system for deciding which one is real. They're not stuck because they can't build — they're stuck because they can't decide. They don't want a report to interpret. They want a verdict and a to-do list.
 
 ---
 
 ## Visual Rules
 
-- Color mode: <!-- TODO: Example: "Dark mode base, system toggle" -->
-- Fonts: <!-- TODO: Example: "Space Grotesk (headlines) + Space Mono (badges/code)" -->
-- Motion: <!-- TODO: Example: "Minimal. One scroll fade max." -->
-- Avoid: <!-- TODO: Example: "No fake testimonials, no stock photos, no popups" -->
+- Color mode: Dark mode base, system toggle
+- Fonts: DM Serif Display (`--font-display`) for score reveal, output headlines, hero + DM Mono (`--font-mono`) for input field, score number, next-action queue, labels — the serif signals weight and judgment; the mono signals machine output and precision
+- Motion: Minimal. Streaming text reveal on agent output. Single staggered fade when score card loads. Nothing celebratory — the user wants signal, not spectacle.
+- Avoid: No fake testimonials. No stock photos. No confetti or celebration states. No popups. No loading spinners longer than 1 second without streaming output already visible.
 
 ---
 
 ## Color System
 
-Five named slots — fill all before running `/init`. These become the `@theme` tokens in `globals.css`.
-
-| Name | Hex | Role |
-|---|---|---|
-| Accent | <!-- TODO: #XXXXXX --> | Primary — CTAs, logomark, key interactive moments |
-| Secondary | <!-- TODO: #XXXXXX --> | Supporting accent — celebration states, highlights |
-| Background | <!-- TODO: #XXXXXX --> | Page background base |
-| Text | <!-- TODO: #XXXXXX --> | Body text — dark, but warm not cold |
-| Muted | <!-- TODO: #XXXXXX --> | Secondary text, borders, placeholders |
+| Name       | Hex     | Role                                                                                                                         |
+| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Accent     | #E8C547 | Primary — score badge, CTAs, next-action queue labels, key output moments. Warm amber: decisiveness, signal, forward motion. |
+| Secondary  | #4ECBA0 | Supporting — high-score confirmation states, "brief ready" indicator                                                         |
+| Background | #111110 | Page background — near-black with a warm undertone, not cold or clinical                                                     |
+| Text       | #E8E6DF | Body text — warm off-white. Never pure white.                                                                                |
+| Muted      | #5A5955 | Secondary text, input placeholders                                                                                           |
+| Surface    | #1C1C1A | Elevated surfaces — cards, input containers, PayGate panel                                                                   |
+| Border     | #2A2A26 | Dividers, input outlines, section separators                                                                                 |
 
 Color rules:
-- <!-- TODO: What color territory does your main competitor own? Avoid it entirely. Example: "Competitor X owns blue-purple gradients." -->
-- <!-- TODO: Any colors explicitly banned? Example: "No cool grays, no pure black, no gradients." -->
+
+- WorthBuild and IdeaProof both use light-mode, report-style layouts. Dark background is an immediate visual differentiator.
+- Notion owns neutral purple-gray. Linear owns blue. Avoid both entirely.
+- No cool grays. No pure white. No neon. No gradients of any kind.
+- Amber is the signal color — use it only on the score, the primary CTA, and the next-action queue headers. Overuse kills it.
 
 ---
 
 ## Logomark
 
-Discovery questions — answer all before attempting to design the mark.
+Direction: Abstract mark — a single downward-pointing chevron or arrow, implying "next decision" and forward motion. Echoes the same mark logic as the next-task tool — same studio, scalable system.
 
-**Direction:**
-<!-- TODO: Letterform, abstract shape, or icon? Example: "Single letterform — the S in Instrument Serif" -->
+Primary color: Accent #E8C547
 
-**Primary color:**
-<!-- TODO: Which brand color is the mark rendered in? Example: "Accent #FF6B6B" -->
+Background: Transparent — no container
 
-**Background:**
-<!-- TODO: Transparent, contained circle, etc.? Example: "Transparent — no container" -->
+Future-proofing: The mark must not be tied to "ideas" specifically. A chevron works whether the product expands to validating blog topics, hiring decisions, or build-vs-buy calls.
 
-**Future-proofing:**
-<!-- TODO: Is the mark tied to the current niche, or scalable? Example: "No birthday-specific imagery — mark must work if product expands to anniversaries/graduations" -->
+Competitor exclusions: Notion owns the stacked-block icon. Linear owns the circle-arc. WorthBuild and IdeaProof use generic report/document iconography. Avoid: stacked shapes, circles with motion arcs, lightbulb icons, document icons, gradient wordmarks.
 
-**Competitor exclusions:**
-<!-- TODO: What visual territory does your main competitor own that you must avoid? Example: "Competitor owns pink-purple gradient circle + music note — avoid: gradients, circle badges, music notes" -->
-
-**Anti-patterns:**
-<!-- TODO: Broader category clichés to avoid. Example: "No music notes, no headphones, no waveform bars, no vinyl" -->
+Anti-patterns: No lightbulbs, no gears, no checkmarks, no chat bubbles, no brain icons, no "spark" iconography, no magnifying glasses
 
 ---
 
 ## Emotional Arc
 
-What a visitor feels at each stage — land, read, scroll, convert.
-
-- Land: <!-- TODO: Example: "Wait, this is different" -->
-- Read: <!-- TODO: Example: "This person actually builds real things" -->
-- Scroll: <!-- TODO: Example: "I want to follow this journey" -->
-- Convert: <!-- TODO: Example: "I don't want to miss the next one" -->
+- Land: "Someone finally automated the part I hate."
+- Read: "This is exactly where I get stuck."
+- Scroll: "Wait — it tells me what to do this week?"
+- Convert: "Just take my $9."
 
 ---
 
 ## Copy Examples
 
-Real copy to use as reference when writing UI text.
-
-- Hero: <!-- TODO: Example: "Tools for people who don't have time for bad software." -->
-- CTA: <!-- TODO: Example: "Don't miss the drop." -->
-- Footer: <!-- TODO: Example: "Built by Luke. Paid for by a day job. Shipping anyway." -->
-- Error: <!-- TODO: Example: "Something went wrong. Try again." -->
+- Hero: "Type the idea. Get the verdict."
+- Sub-headline: "One input. Score, reasoning, and three things to do this week. Ready to build or kill."
+- CTA: "Run the discovery →"
+- Score reveal header: "Here's the read."
+- Next-action queue header: "What to do this week."
+- Next-action queue example format: "1. Post in r/indiehackers with this framing: [exact copy]. 2. Check Todoist and TickTick reviews on G2 — look for the top complaint. 3. Wire the Stripe Payment Link before building anything else."
+- PayGate header: "Your build brief is ready."
+- PayGate sub: "Get the full brief for $9 — one time, no subscription. Shareable one-pager with market positioning, brand direction, and route plan. Includes context.md + brand.md if you're on the Modryn boilerplate."
+- Email capture: "Get notified when scoring criteria update."
+- Error: "Something broke mid-run. Your input is still here — try again."
+- Low score state: "This one scores a 3. Here's why — and the one thing that would change it."
+- Empty state: "Describe a frustration, a gap you keep noticing, or an idea you can't stop thinking about."
